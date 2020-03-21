@@ -1,0 +1,57 @@
+<div class="content-header">
+    <h2 class="content-title">图片列表</h2>
+    <span class="layui-breadcrumb">
+	  <a href="#!home">首页</a>
+	  <a><cite>图片列表</cite></a>
+	</span>
+</div>
+<!-- 表格 -->
+<div>
+    <div class="layui-form toolbar">
+        类型：
+        <select id="searchCategory">
+            <option value="">-请选择-</option>
+            <option value="CASE">案例</option>
+            <option value="LIVING_ROOM">客厅</option>
+            <option value="BED_ROOM">卧室</option>
+            <option value="KITCHEN">厨房</option>
+            <option value="DINING_ROOM">餐厅</option>
+            <option value="BATH_ROOM">卫生间</option>
+            <option value="OTHER_ROOM">其他房间</option>
+            <option value="DESIGNER">设计师</option>
+        </select>&emsp;
+        <button id="searchBtn" class="layui-btn search-btn"><i class="layui-icon">&#xe615;</i>搜索</button>
+        <button id="addBtn" class="layui-btn"><i class="layui-icon">&#xe608;</i> 添加</button>
+    </div>
+
+    <table class="layui-table" id="pictureList" lay-filter="pictureList"></table>
+</div>
+
+<!-- 表格操作列 -->
+<script type="text/html" id="barTpl">
+    <a class="layui-btn layui-btn-warm layui-btn-xs" lay-event="edit"><i class="layui-icon">&#xe6b2;</i>编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delete"><i class="layui-icon">&#xe640;</i>删除</a>
+</script>
+<!-- 表格状态列 -->
+<script type="text/html" id="categoryTpl">
+    {{# if(d.category == 'CASE'){ }}
+    <span class="layui-badge layui-bg-blue">案例</span>
+    {{# } else if(d.category == 'LIVING_ROOM'){ }}
+    <span class="layui-badge">客厅</span>
+    {{# } else if(d.category == 'BED_ROOM'){ }}
+    <span class="layui-badge layui-bg-green">卧室</span>
+    {{# } else if(d.category == 'KITCHEN'){ }}
+    <span class="layui-badge layui-bg-orange">厨房</span>
+    {{# } else if(d.category == 'DINING_ROOM'){ }}
+    <span class="layui-badge layui-bg-orange">餐厅</span>
+    {{# } else if(d.category == 'BATH_ROOM'){ }}
+    <span class="layui-badge layui-bg-orange">卫生间</span>
+    {{# } else if(d.category == 'OTHER_ROOM'){ }}
+    <span class="layui-badge layui-bg-orange">其他</span>
+    {{# } else if(d.category == 'DESIGNER'){ }}
+    <span class="layui-badge layui-bg-orange">设计师</span>
+    {{# } }}
+</script>
+
+<script type="text/javascript" src="/cms/assets/js/config/pictureList.js"></script>
+<script type="text/javascript" src="/cms/assets/js/config/pictureModel.js"></script>

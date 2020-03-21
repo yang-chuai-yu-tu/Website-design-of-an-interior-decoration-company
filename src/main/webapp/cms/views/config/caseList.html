@@ -1,0 +1,36 @@
+<div class="content-header">
+    <h2 class="content-title">案例列表</h2>
+    <span class="layui-breadcrumb">
+	  <a href="#!home">首页</a>
+	  <a><cite>案例列表</cite></a>
+	</span>
+</div>
+<!-- 表格 -->
+<div>
+    <div class="layui-form toolbar">
+        类型：
+        <select id="searchStyle">
+            <option value="">-请选择-</option>
+            <option value="中式">中式</option>
+            <option value="法式">法式</option>
+            <option value="美式">美式</option>
+            <option value="现代简约">现代简约</option>
+            <option value="简欧">简欧</option>
+            <option value="轻奢">轻奢</option>
+            <option value="雅致">雅致</option>
+        </select>&emsp;
+        <button id="searchBtn" class="layui-btn search-btn"><i class="layui-icon">&#xe615;</i>搜索</button>
+        <button id="addBtn" class="layui-btn"><i class="layui-icon">&#xe608;</i> 添加</button>
+    </div>
+
+    <table class="layui-table" id="caseList" lay-filter="caseList"></table>
+</div>
+
+<!-- 表格操作列 -->
+<script type="text/html" id="barTpl">
+    <a class="layui-btn layui-btn-warm layui-btn-xs" lay-event="edit"><i class="layui-icon">&#xe6b2;</i>编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delete"><i class="layui-icon">&#xe640;</i>删除</a>
+</script>
+
+<script type="text/javascript" src="/cms/assets/js/config/caseList.js"></script>
+<script type="text/javascript" src="/cms/assets/js/config/caseModel.js"></script>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>家装平台 案例管理</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/cms/assets/libs/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="/cms/assets/css/comment.css" media="all" />
+</head>
+
+<body class="childrenBody">
+<form class="layui-form layui-row layui-col-space10 layui-form-pane">
+    <div class="layui-col-md7 layui-col-xs12">
+        <blockquote class="layui-elem-quote title">案例详情</blockquote>
+        <div class="layui-row layui-col-space1">
+            <div class="layui-form-item magt0 magb0">
+                <label class="layui-form-label">案例编号</label>
+                <div class="layui-input-block">
+                    <input name="id" id="id" type="text" class="layui-input idBiz" readonly="true"  placeholder="自动生成"/>
+                </div>
+            </div>
+        </div>
+        <div class="layui-row layui-col-space1">
+            <div class="layui-form-item magt0 magb0">
+                <label class="layui-form-label">案例风格</label>
+                <div class="layui-input-block">
+                    <select name="style" id="style"  class=" styleBiz" lay-verify="required">
+                        <option value="">-请选择-</option>
+                        <option value="中式">中式</option>
+                        <option value="法式">法式</option>
+                        <option value="美式">美式</option>
+                        <option value="现代简约">现代简约</option>
+                        <option value="简欧">简欧</option>
+                        <option value="轻奢">轻奢</option>
+                        <option value="雅致">雅致</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="layui-row layui-col-space1">
+            <div class="layui-form-item magt0 magb0">
+                <label class="layui-form-label">设计师id</label>
+                <div class="layui-input-block">
+                    <input name="designerId" id="designerId" type="text" class="layui-input designerIdBiz"/>
+                </div>
+            </div>
+        </div>
+        <div class="layui-row layui-col-space1">
+            <div class="layui-form-item magt0 magb0">
+                <label class="layui-form-label">案例名称</label>
+                <div class="layui-input-block">
+                    <input name="name" id="name" type="text" class="layui-input nameBiz"/>
+                </div>
+            </div>
+        </div>
+        <div class="layui-row layui-col-space1">
+            <div class="layui-form-item magt0 magb0">
+                <label class="layui-form-label">面积</label>
+                <div class="layui-input-block">
+                    <input name="area" id="area" type="text" class="layui-input areaBiz"/>
+                </div>
+            </div>
+        </div>
+        <div class="layui-row layui-col-space1">
+            <div class="layui-form-item magt0 magb0">
+                <label class="layui-form-label">所在城市</label>
+                <div class="layui-input-block">
+                    <input name="city" id="city" type="text" class="layui-input cityBiz"/>
+                </div>
+            </div>
+        </div>
+        <div class="layui-row layui-col-space1">
+            <div class="layui-form-item magt0 magb0">
+                <label class="layui-form-label">户型</label>
+                <div class="layui-input-block">
+                    <input name="bedroomNum" id="bedroomNum" type="text" class="layui-input bedroomNumBiz"/>
+                </div>
+            </div>
+        </div>
+        <div class="layui-row layui-col-space1">
+            <div class="layui-form-item magt0 magb0">
+                <label class="layui-form-label">优先级</label>
+                <div class="layui-input-block">
+                    <input name="priority" id="priority" type="text" class="layui-input priorityBiz"/>
+                </div>
+            </div>
+        </div>
+
+        <!--<br>-->
+        <!--<button type="button" class="layui-btn" id="upload">-->
+        <!--<i class="layui-icon">&#xe67c;</i>上传图片-->
+        <!--</button>-->
+    </div>
+    <div class="layui-col-md5 layui-col-xs12">
+        <blockquote class="layui-elem-quote title">
+            <div class="layui-inline"><i class="layui-icon">&#xe609;</i>设计理念</div>
+        </blockquote>
+        <div class="layui-form-item layui-form-text magt0 magb0">
+            <!--label class="layui-form-label">处理意见</label-->
+            <div class="layui-input-block">
+                <textarea class="layui-textarea" name="concept" id="concept"  class=" conceptBiz"></textarea>
+            </div>
+        </div>
+    </div>
+    <a class="layui-btn layui-btn-lg applyPass" lay-filter="applyPass" href="javascript:;" lay-submit>提交</a>
+</form>
+
+<script type="text/javascript" src="/cms/assets/libs/jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/cms/assets/libs/layui/layui.all.js"></script>
+<script type="text/javascript" src="/cms/assets/js/config.js"></script>
+<script type="text/javascript" src="/cms/assets/js/comment.js"></script>
+<script type="text/javascript" src="/cms/assets/js/config/caseAprv.js"></script>
+
+
+</body>
+
+</html>

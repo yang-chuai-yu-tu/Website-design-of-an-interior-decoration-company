@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>家装平台 预约处理</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="/cms/assets/libs/layui/css/layui.css" media="all" />
+	<link rel="stylesheet" href="/cms/assets/css/comment.css" media="all" />
+</head>
+
+<body class="childrenBody">
+<form class="layui-form layui-row layui-col-space10 layui-form-pane">
+	<div class="layui-col-md7 layui-col-xs12">
+		<blockquote class="layui-elem-quote title">预约详情</blockquote>
+		<div class="layui-row layui-col-space1">
+			<div class="layui-form-item magt0 magb0">
+				<label class="layui-form-label">预约编号</label>
+				<div class="layui-input-block">
+					<input name="id" id="id" type="text" class="layui-input idBiz" readonly="true"/>
+				</div>
+			</div>
+		</div>
+		<div class="layui-row layui-col-space1">
+			<div class="layui-form-item magt0 magb0">
+				<label class="layui-form-label">顾客姓名</label>
+				<div class="layui-input-block">
+					<input name="customerName" id="customerName" type="text" class="layui-input nameBiz" readonly="true"/>
+				</div>
+			</div>
+		</div>
+		<div class="layui-row layui-col-space1">
+			<div class="layui-form-item magt0 magb0">
+				<label class="layui-form-label">预约时间</label>
+				<div class="layui-input-block">
+					<input name="orderDate" id="orderDate" type="text" class="layui-input adateBiz" readonly="true"/>
+				</div>
+			</div>
+		</div>
+		<div class="layui-row layui-col-space1">
+			<div class="layui-form-item magt0 magb0">
+				<label class="layui-form-label">顾客电话</label>
+				<div class="layui-input-block">
+					<input name="phoneNum" id="phoneNum" type="text" class="layui-input phoneBiz" readonly="true"/>
+				</div>
+			</div>
+		</div>
+		<div class="layui-row layui-col-space1">
+			<div class="layui-form-item magt0 magb0">
+				<label class="layui-form-label">所在省市</label>
+				<div class="layui-input-block">
+					<input name="province" id="province" type="text" class="layui-input locationBiz" readonly="true"/>
+				</div>
+			</div>
+		</div>
+		<div class="layui-row layui-col-space1">
+			<div class="layui-form-item magt0 magb0">
+				<label class="layui-form-label">接待设计师</label>
+				<div class="layui-input-block">
+					<input name="designerName" id="designerName" type="text" class="layui-input designerBiz" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="layui-col-md5 layui-col-xs12">
+		<blockquote class="layui-elem-quote title">
+			<div class="layui-inline"><i class="layui-icon">&#xe609;</i>处理意见</div>
+			<div class="layui-inline">
+				<a class="layui-btn layui-btn-sm applyPass" lay-filter="applyPass" href="javascript:;" lay-submit>成功</a>
+			</div>
+			<div class="layui-inline">
+				<a class="layui-btn layui-btn-sm layui-btn-danger applyFail" lay-filter="applyFail" href="javascript:;" lay-submit>失败</a>
+			</div>
+			<div class="layui-inline">
+				<a class="layui-btn layui-btn-sm layui-btn-primary applyCancel" lay-filter="applyCancel" href="javascript:;" lay-submit>取消</a>
+			</div>
+		</blockquote>
+		<input name="status" id="status" type="hidden" />
+		<div class="layui-form-item layui-form-text magt0 magb0">
+			<!--label class="layui-form-label">处理意见</label-->
+			<div class="layui-input-block">
+				<textarea class="layui-textarea" name="note" id="apply_process_note"></textarea>
+			</div>
+		</div>
+	</div>
+</form>
+
+<script type="text/javascript" src="/cms/assets/libs/jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/cms/assets/libs/layui/layui.all.js"></script>
+<script type="text/javascript" src="/cms/assets/js/config.js"></script>
+<script type="text/javascript" src="/cms/assets/js/comment.js"></script>
+<script type="text/javascript" src="/cms/assets/js/appointment/appointmentAprv.js"></script>
+
+</body>
+
+</html>
